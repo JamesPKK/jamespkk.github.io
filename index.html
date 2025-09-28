@@ -1,11 +1,99 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>James Homepage</title>
-  </head>
-  <body>
-    <h1>Welcome to James's Website!</h1>
-    <p>This is my personal GitHub Page.</p>
-    <a href="cv.pdf">Download my CV</a>
-  </body>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>James Pui Kiu Kong · Portfolio</title>
+  <meta name="description" content="James Pui Kiu Kong · GitHub Pages" />
+  <style>
+    :root{
+      --bg:#0f172a;         /* slate-900 */
+      --card:#111827;       /* gray-900 */
+      --muted:#94a3b8;      /* slate-400 */
+      --text:#e5e7eb;       /* gray-200 */
+      --accent:#60a5fa;     /* blue-400 */
+      --accent-2:#22d3ee;   /* cyan-400 */
+      --ring:#1f2937;       /* gray-800 */
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:linear-gradient(135deg,var(--bg),#020617 60%);color:var(--text);font:16px/1.6 ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial}
+    a{color:var(--accent);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .wrap{max-width:980px;margin:0 auto;padding:56px 20px}
+    .card{background:linear-gradient(180deg,rgba(255,255,255,0.04),rgba(255,255,255,0.02));
+          border:1px solid var(--ring); border-radius:18px; padding:28px 28px}
+    .hero{display:grid;grid-template-columns:1fr;gap:18px;align-items:center}
+    @media(min-width:720px){.hero{grid-template-columns:1.1fr .9fr}}
+    .title{font-size:38px;line-height:1.2;margin:0 0 6px;font-weight:800;letter-spacing:.2px}
+    .subtitle{color:var(--muted);margin:0 0 18px}
+    .btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:12px}
+    .btn{display:inline-flex;align-items:center;gap:8px;padding:12px 16px;border-radius:12px;border:1px solid var(--ring);
+         background:#0b1220; transition:transform .05s ease, border-color .15s ease}
+    .btn.primary{background:linear-gradient(90deg,var(--accent),var(--accent-2));color:#001018;border-color:transparent}
+    .btn:hover{transform:translateY(-1px)}
+    .section{margin-top:28px}
+    .grid{display:grid;gap:14px}
+    @media(min-width:720px){.grid{grid-template-columns:repeat(3,1fr)}}
+    .tile{background:linear-gradient(180deg,rgba(255,255,255,.03),rgba(255,255,255,.015));border:1px solid var(--ring);padding:18px;border-radius:14px}
+    .tile h3{margin:0 0 6px;font-size:18px}
+    .meta{color:var(--muted);font-size:14px}
+    footer{opacity:.8;margin-top:26px;font-size:13px;color:var(--muted)}
+    .avatar{width:100%;max-width:140px;aspect-ratio:1/1;border-radius:50%;border:2px solid var(--ring);object-fit:cover}
+    .right{text-align:center}
+    @media(min-width:720px){.right{text-align:right}}
+    .dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--accent-2);margin-right:8px;vertical-align:middle}
+    .mono{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace;color:#9ca3af}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card hero">
+      <div>
+        <h1 class="title">James Pui Kiu Kong</h1>
+        <p class="subtitle">
+          <span class="dot"></span> Data-driven product & analytics. Building in the AI ecosystem.
+        </p>
+        <div class="btns">
+          <a class="btn primary" href="Pui%20Kiu%20Kong%20Resume.pdf" target="_blank" rel="noopener">📄 View CV (PDF)</a>
+          <a class="btn" href="https://github.com/jamespkk" target="_blank" rel="noopener">⭐ GitHub</a>
+          <a class="btn" href="mailto:jameskong@poke.house">✉️ Contact</a>
+        </div>
+      </div>
+      <div class="right">
+        <!-- 若没有头像可删掉 img -->
+        <img class="avatar" src="https://avatars.githubusercontent.com/u/0?v=4" alt="avatar placeholder" />
+        <div class="meta" style="margin-top:8px">San Jose, CA · <span class="mono">https://jamespkk.github.io</span></div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="grid">
+        <div class="tile">
+          <h3>About</h3>
+          <p>I analyze growth, pricing, and menu/product strategy with Python & SQL, and turn findings into simple, decision-ready visuals.</p>
+          <p class="meta">Interests: A/B testing · forecasting · LTV/CAC · ops analytics</p>
+        </div>
+        <div class="tile">
+          <h3>Highlights</h3>
+          <ul class="meta">
+            <li>Built campaign uplift measurement (dynamic & static baselines)</li>
+            <li>AOV diagnostic across channels & stores</li>
+            <li>Menu structure breakdown & combo opportunity scoring</li>
+          </ul>
+        </div>
+        <div class="tile">
+          <h3>Selected Repos</h3>
+          <ul class="meta">
+            <li><a href="https://github.com/jamespkk" target="_blank">See all on GitHub →</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      © <span id="y"></span> James Pui Kiu Kong. Hosted on GitHub Pages.
+    </footer>
+  </div>
+  <script>document.getElementById('y').textContent=new Date().getFullYear();</script>
+</body>
 </html>
